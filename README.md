@@ -1,12 +1,10 @@
-# Cal to Butt: Chrome Extension Hackpack @ Treehacks 2019
+# Mattify: Chrome Extension Hackpack @ VandyHacks VI 2019
 
 ## Overview
 
-Congratulations! You've chosen this hackpack, and you're well on your way to building a super cool product!
+In this hackpack, you will build a chrome extension that replaces all the images on a webpage with a given image. The image in mind for this hackpack will replace all images with the face of one of our fearless leaders, Matt Leon.
 
-In this hackpack, you will build a chrome extension that replaces the content on webpages according to customizable rules. Your main task is to replace all instances of the text "cal" with the text "butt" on all webpages.
-
-It utilizes some Javascript and HTML to edit website displays, and can be easily changed and altered to suit other purposes.
+It will use Javascript and HTML to be able to edit the elements and their properties on a webpage. This hackpack will also include some commented-out code that is not actually utilized but can serve as a possible alternative way to achieve the same goal.
 
 ## Getting Started
 
@@ -139,7 +137,7 @@ If you have any comments, positive or negative, reach out to Michelle Bao (@orga
 
 ### Credit
 
-Credit for the idea goes to the originators of the Cloud-to-Butt Chrome Extension. Credit for great documentation (much of which we shamelessly stole) goes to the Chromium contributors. Credit for the images goes to XKCD. Credit for this hackpack in past years goes to [Sam Redmond](https://github.com/sredmond) and [Joy Hsu](https://github.com/joyhsu0504). This year's hackpack was developed by [Michelle Bao](https://github.com/michellebao/).
+Inspiration for this Hackpack README came from TreeHack's chrome extension: https://github.com/TreeHacks/hackpack-chrome-ext
 
 ### License
 MIT

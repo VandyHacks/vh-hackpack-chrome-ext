@@ -6,15 +6,11 @@
  */
 
 
+ // Waits for the DOM elements in the popup to load before assigning the button
+ // an eventlistener of its own
 document.addEventListener('DOMContentLoaded', function () {
-    var links = document.getElementsByTagName("a");
-    for (var i = 0; i < links.length; i++) {
-        (function () {
-            var ln = links[i];
-            var location = ln.href;
-            ln.onclick = function () {
-                chrome.tabs.create({active: true, url: location});
-            };
-        })();
-    }
+    document.getElementById('matt').addEventListener('click', function() {
+        // will execute the content script which can manipulate the page's DOM
+        chrome.tabs.executeScript(null, {file: "src/content.js"});
+    })
 });

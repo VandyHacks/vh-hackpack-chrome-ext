@@ -13,7 +13,7 @@
 {
   // Required
   "manifest_version": 2,
-  "name": "Cal to Butt",
+  "name": "Mattify",
   "version": "0.0.1",
 
   // Recommended
@@ -28,31 +28,34 @@
   },
 
   // Optional
-  "homepage_url": "https://www.treehacks.com/",
+  "homepage_url": "https://www.mattleon.com",
 
   // Put any additional permissions your applications needs here.
   // For a list of possibilities, see
   // https://developer.chrome.com/extensions/declare_permissions
   "permissions": [
-    "storage" // Allows access to chrome.storage API
-],
-
+    "activeTab",
+    "storage"
+  ],
   // Probably will not need to be modified unless you *really*
   // know what you're doing
   "browser_action": {
     "default_icon": "icons/TreeHacks-white-19.png",
-    "default_title": "Cal to Butt",
+    "default_title": "Mattify",
     "default_popup": "src/popup.html"
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*/*"
-      ],
-      "js": [
-        "/src/content.js"
-      ],
-      "run_at": "document_end"
-    }
-  ]
+  // No need for this because we are manually loading in content.js with each button click
+  // but might be useful when you want it to be automatically loaded in
+  // "content_scripts": [
+  //   {
+  //     "matches": [
+  //       "http://*/*", "https://*/*"
+  //     ],
+  //     "js": [
+  //       "/src/content.js"
+  //     ],
+  //     "run_at": "document_end"
+  //   }
+  // ],
+  "web_accessible_resources": ["src/image.jpg"]
 }
