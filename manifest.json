@@ -1,0 +1,63 @@
+/* File: manifest.json
+ * -------------------
+ * A manifest file (like this one) is used to
+ * give Chrome information about your extension.
+ *
+ * You shouldn't need to change anything in this file
+ * unless you're doing extensions.
+ *
+ * For more details, check out the documentation:
+ * https://developer.chrome.com/extensions/manifest
+ */
+
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Mattify",
+  "version": "0.0.1",
+
+  // You should always provide a 128x128 icon; it's used during installation and by the Chrome Web Store. 
+  // Extensions should also provide a 48x48 icon, which is used in the extensions management page. 
+  // You can also specify a 16x16 icon to be used as the favicon for an extension's pages.
+  "description": "Chrome Extension Hackpack @ VandyHacks 2019",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  // Optional
+  "homepage_url": "https://www.mattleon.com",
+
+  // Put any additional permissions your applications needs here.
+  // For a list of possibilities, see
+  // https://developer.chrome.com/extensions/declare_permissions
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  // Probably will not need to be modified unless you *really*
+  // know what you're doing
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Mattify",
+    "default_popup": "src/popup.html"
+  },
+  // No need for this because we are manually loading in content.js with each button click
+  // but might be useful when you want it to be automatically loaded in
+  // "content_scripts": [
+  //   {
+  //     "matches": [
+  //       "http://*/*", "https://*/*"
+  //     ],
+  //     "js": [
+  //       "/src/content.js"
+  //     ],
+  //     "run_at": "document_end"
+  //   }
+  // ],
+
+  // This allows us to access our local image on the web.
+  // Without it, the image would not load properly on the webpage.
+  "web_accessible_resources": ["src/mattify.jpg"]
+}
