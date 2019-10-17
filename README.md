@@ -9,9 +9,11 @@ It will use Javascript and HTML to be able to edit the elements and their proper
 ## Getting Started
 
 ### Download the code and other tools
+
 You will need Google Chrome to test and use this extension.
 
 To get the code either:
+
 1. Download and unzip the zip file
 2. Git clone the code
 
@@ -20,10 +22,12 @@ Both will options can be done by clicking the green button in the top right:
 ![Getting Code](https://i.imgur.com/LOc3LBG.png)
 
 You will also need an editor to change the code! Some easy-to-use options include:
+
 1. <a href="https://code.visualstudio.com/">VSCode</a>
 2. <a href="https://www.sublimetext.com/">Sublime</a>
 
 ### Load Starter Code
+
 Chrome usually ships extensions as `.crx` files (similar to `.zip` files), which is great for distribution, but not so great for developing. Instead, we'll tell Chrome to treat the starter code folder as an extension.
 
 We need to enable Chrome Developer Settings in order to build our chrome extension.
@@ -48,11 +52,13 @@ Additionally, pay close attention to the **Reload** link.
 #### The Basics of Chrome Extensions
 
 What are Chrome Extensions?
+
 > Extensions are small software programs that can modify and enhance the functionality of the Chrome browser. You write them using web technologies such as HTML, JavaScript, and CSS.
 
 If you want to learn more about Chrome Extensions, read through Google's [introduction](https://developer.chrome.com/extensions) to extensions and Google's high-level [overview](https://developer.chrome.com/extensions/overview).
 
 ## What does each file do?
+
 Here are brief descriptions of each file. Feel free to take a look into a specific file to get a better understanding for the why each line was included in there.
 
 **manifest.json**
@@ -65,7 +71,7 @@ This is the html code for the little window popup that appears when you click on
 This file will allow you inject javascript code into your popup window. We are using this file to add an event listener to the button we added in popup.html. This listener will then execute another javascript file whenever the button is clicked.
 
 **src/content.js**
-Unlike the other files we've talked about, this file will actually be able to change contents of your webpage. This is because this of how we call this file from popup.js as we are executing this inside the chrome tab AKA the current webpage whenever we click the popup button. 
+Unlike the other files we've talked about, this file will actually be able to change contents of your webpage. This is because this of how we call this file from popup.js as we are executing this inside the chrome tab AKA the current webpage whenever we click the popup button.
 
 The contents of this file includes finding all the images on a page and switching them out for Matt's face.
 
@@ -77,4 +83,4 @@ The icons folder is used to help contain all our chrome extension icons and thei
 
 ### Credit
 
-Inspiration for this Hackpack README came from TreeHack's chrome extension: https://github.com/TreeHacks/hackpack-chrome-ext
+Inspiration for this hackpack came from TreeHack's chrome extension: https://github.com/TreeHacks/hackpack-chrome-ext
